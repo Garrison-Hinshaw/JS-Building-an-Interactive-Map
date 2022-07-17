@@ -1,16 +1,14 @@
-// create map                                                      
+// create map
 const myMap = L.map('map', {
-    center: [48.868672, 2.342130],
-    zoom: 12,
+	center: [48.868672, 2.342130],
+	zoom: 12,
 });
 
-
-// add openstreetmap tile
-L.tileLayer('https://.tile.openstreetmap.org///.png', {
+// add openstreetmap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     minZoom: '15',
 }).addTo(myMap)
-
 
 // create and main add geolocation marker
 const marker = L.marker([48.87007, 2.346453])
